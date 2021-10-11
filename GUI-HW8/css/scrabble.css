@@ -1,0 +1,64 @@
+body {
+    background-color: #3b4368;
+}
+
+.jumbotron-fluid{
+    background-color: wheat;
+    border-radius: 15px;
+}
+
+.Tiles {
+    width: 71px;
+    height: 71px;
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#ScrabbleBoard {
+    padding-bottom: 60px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#RackHolder {
+    position: relative;
+    padding-bottom: 7em;
+}
+
+#Rack, .LetterTiles {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.LetterTiles {
+    margin-right: 45px;
+}
+
+#InfoTable{
+    padding-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#Score, #Word, #Remaining {
+    color: white;
+    padding-right: 180px;
+    display: inline-block;
+}
+
+#DoubleWord {
+    background: url("../Images/Other/DoubleWord.png");
+    background-size: 71px 71px;
+}
+
+#DoubleLetter {
+    background: url("../Images/Other/DoubleLetter.png");
+    background-size: 71px 71px;
+}

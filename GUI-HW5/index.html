@@ -1,0 +1,56 @@
+<!--
+File: index.html
+91.61 GUI Programming I Assignment: Creating First Webpage
+Tarpan Patel Umass Lowell Computer Science, tarpan_patel@student.uml.edu
+Copyright (c) 2013 by Tarpan Patel. All rights reserved.
+Source: http://w3schools.com
+-->
+
+<html>
+    <head>
+        <title>Tarpan Patel</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+    
+        <header>
+            <div class = "jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">MULTIPLICATION TABLE</h1>
+                </div>
+            </div>
+               
+        </header>
+
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="Min-Col">Minimum Column Value: </label><br>
+                    <input type="number" class="form-control" placeholder= "Valid range 0 to -50"id="minCol"></input>
+                </div>
+                <div class="form-group">
+                    <label for="Max-Col">Maximum Column Value</label>
+                    <input type="number" class="form-control" placeholder= "Valid range 0 to 50" id="maxCol"></input>
+                </div>
+                <div class="form-group">
+                    <label for="Min-Row">Minimum Row Value</label>
+                    <input type="number" class="form-control" placeholder= "Valid range 0 to -50" id="minRow"></input>
+                </div>
+                <div class="form-group">
+                    <label for="Max-Row">Maximum Row Value</label>
+                    <input type="number" class="form-control" placeholder= "Valid Range 0 to 50" id="maxRow"></input>
+                </div>
+                <button type="submit" onclick="validateInput()">Submit</button>
+            </form>
+
+            <div id="multable"></div>
+                
+                <p id = "errorMessage"></p>
+            </div>
+        
+
+            <script type="text/javascript" src="./js/script.js"></script>
+        </div>
+    </body>
+</html>

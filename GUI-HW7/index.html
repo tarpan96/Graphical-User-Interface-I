@@ -1,0 +1,110 @@
+<!--
+File: index.html
+91.61 GUI Programming I Assignment: Jquery
+Tarpan Patel Umass Lowell Computer Science, tarpan_patel@student.uml.edu
+Copyright (c) 2013 by Tarpan Patel. All rights reserved.
+Source: http://w3schools.com
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Multiplication</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel =" https://code.jquery.com/ui/jquery-ui-git.js" >
+</head>
+
+<body>
+<!--Create navbar using bootstrap, source: https://getbootstrap.com/docs/4.0/components/navbar/ -->
+<nav class="navbar navbar-expand-sm navbar-light bg-dark">
+    <a class="navbar-brand" href="#">Homework 7</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="https://cs.uml.edu/~tpatel1/index.html">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--Using bootstrap Jumbotron to display header,
+    Source: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+<header>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">MULTIPLICATION TABLE</h1>
+        </div>
+    </div>
+</header>
+<!--Creates form and text boxes for user inputs:
+    Source: https://getbootstrap.com/docs/4.0/components/forms/-->
+<div class="container">
+    <form id="inputForm" onsubmit="return false;">
+        <div class="form-group">
+            <label for="Min-Col">Minimum Multiplier Value: </label>
+            <input type="number" class="form-control"  id="minCol" name="minCol">
+        </div>
+        <div id="minXSlider" class="allSliders"></div>
+        <div class="form-group">
+            <label for="Max-Col">Maximum Multiplier Value</label>
+            <input type="number" class="form-control" id="maxCol" name="maxCol">
+        </div>
+        <div id="maxXSlider" class="allSliders"></div>
+        <div class="form-group">
+            <label for="Min-Row">Minimum Multiplicand Value</label>
+            <input type="number" class="form-control" id="minRow" name="minRow">
+        </div>
+        <div id="minYSlider" class="allSliders"></div>
+        <div class="form-group">
+            <label for="Max-Row">Maximum Multiplicand Value</label>
+            <input type="number" class="form-control" id="maxRow" name="maxRow">
+        </div>
+        <div id="maxYSlider" class="allSliders"></div>
+        <!--Create placeholder for message-->
+        <div id="highValue"></div>
+        <!--buttons for submitting the form, adding or removing tabs-->
+        <button type="submit" class="btn btn-info btn-md" id="submitButton">Submit</button>
+        <button type="button" class="btn btn-info btn-md" id="add">Add Tab</button>
+        <button type="button" class="btn btn-info btn-md" id="Remove">Remove Tabs</button>
+    </form>
+</div>
+<!--Place holder for muliplication table when created:
+  Sourcehttps://getbootstrap.com/docs/4.0/content/tables/-->
+<div class="container" id="holdTable">
+    <div class="multable"></div>
+</div>
+
+<!--Place holder for tabs-->
+<div id="tabs">
+    <ul>
+
+    </ul>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"
+        integrity="sha384-6UVI3atWyL/qZbDIJb7HW8PyHhFNMiX5rYNY2gAYcaYJjYk5cNIQShSQPBleGMYu"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+<!--Link to jQuery script file-->
+<script src="./js/validate.js"></script>
+<script src="./js/userInterface.js"></script>
+<!--Link to javascript script file-->
+<script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+</html>

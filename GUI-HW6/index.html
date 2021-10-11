@@ -1,0 +1,90 @@
+<!--
+File: index.html
+91.61 GUI Programming I Assignment: Jquery
+Tarpan Patel Umass Lowell Computer Science, tarpan_patel@student.uml.edu
+Copyright (c) 2013 by Tarpan Patel. All rights reserved.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Multiplication</title>        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+      <!--Create navbar using bootstrap, source: https://getbootstrap.com/docs/4.0/components/navbar/ -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+          <a class="navbar-brand" href="#">Homework 6</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="https://cs.uml.edu/~tpatel1/index.html">Home</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+          <!--Using bootstrap Jumbotron to display header,
+              Source: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+        <header>
+            <div class = "jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">MULTIPLICATION TABLE</h1>
+                </div>
+            </div>       
+        </header>
+        <!--Creates form and text boxes for user inputs: 
+            Source: https://getbootstrap.com/docs/4.0/components/forms/-->
+        <div class="container">
+            <form id ="inputForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="Min-Col">Minimum Multiplier Value: </label>
+                    <input type="number" class="form-control" id="minCol" name="minCol">
+                </div>
+                <div class="form-group">
+                    <label for="Max-Col">Maximum Multiplier Value</label>
+                    <input type="number" class="form-control" id="maxCol"  name="maxCol">
+                </div>
+                <div class="form-group">
+                    <label for="Min-Row">Minimum Multiplicand Value</label>
+                    <input type="number" class="form-control" id="minRow"  name="minRow">
+                </div>
+                <div class="form-group">
+                    <label for="Max-Row">Maximum Multiplicand Value</label>
+                    <input type="number" class="form-control" id="maxRow"  name="maxRow">
+                </div>
+                <!--Create placeholder for message-->
+                <div id="highValue"></div>
+                <button type="submit" class ="btn btn-info btn-lg" id="submitButton">Submit</button>
+            </form>
+        </div>
+        <!--Place holder for muliplication table when created: 
+          Sourcehttps://getbootstrap.com/docs/4.0/content/tables/-->
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+          <div class="multable"></div>  
+        </div>
+        
+        <!--Link to javascript script file-->
+        <script type="text/javascript" src="./js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha384-6UVI3atWyL/qZbDIJb7HW8PyHhFNMiX5rYNY2gAYcaYJjYk5cNIQShSQPBleGMYu"  crossorigin="anonymous"></script>
+        <!--Link to jQuery script file-->
+        <script src="./js/validate.js"></script>
+         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+        <!--https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrap-->
+        <div class="navbar-fixed-bottom text-center font-small">
+          <footer>
+            <h6>Copyright © 2020 Tarpan Patel</h6>
+          </footer>
+        </div>
+      </body>
+</html>
